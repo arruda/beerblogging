@@ -47,6 +47,7 @@ def update_entries(*args):
                 new_entry = BlogEntry()
                 new_entry.title = entry['title']
                 new_entry.author_email = member.email
+                new_entry.betting_group = member.group
                 new_entry.summary = entry['summary']
                 #new_entry.content = entry['content']
                 new_entry.link = entry['link']

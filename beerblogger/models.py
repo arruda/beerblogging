@@ -7,12 +7,12 @@ from members import *
 
 database = peewee.Database(peewee.SqliteAdapter(), app.config['DATABASE_NAME'])
 
-class BeerGroup(peewee.Model):
-    title =     peewee.CharField()
-    gid =       peewee.CharField()
-    
-    class Meta:
-        database = database
+#class BeerGroup(peewee.Model):
+#    title =     peewee.CharField()
+#    gid =       peewee.CharField()
+#    
+#    class Meta:
+#        database = database
 
         
 class BlogEntry(peewee.Model):
@@ -21,7 +21,7 @@ class BlogEntry(peewee.Model):
     link =      peewee.CharField()
 
     author_email = peewee.CharField()
-    group =     peewee.ForeignKeyField(BeerGroup)
+    betting_group =     peewee.CharField()
 
     summary =   peewee.TextField() 
     tags =      peewee.CharField()
